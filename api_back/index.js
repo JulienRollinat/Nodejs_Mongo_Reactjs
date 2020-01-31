@@ -9,7 +9,7 @@ const UserRouter = require("./routes/userRoutes");
 app.use(bodyParser.json({ type: '*/*' }));
 app.use(cors());
 
-mongoose.connect('mongodb+srv://admin:sombra9395@cluster0-lkbtj.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://<username>:<password>@cluster0-lkbtj.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.connection.once('open', ()=> {
 	console.log('connecté à mongodb');
 	
